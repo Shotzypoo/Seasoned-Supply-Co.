@@ -26,7 +26,7 @@ const drops = [
     cta: "DM to Reserve Drop 1",
     available: true,
     actionHref: "#contact",
-    image: DROP_001_IMAGE,
+    image: "/images/21280.jpg",
     imageAlt: "Drop 001 If You Ain’t Sneasin tee mockup",
   },
   {
@@ -39,7 +39,7 @@ const drops = [
     cta: "Join Drop 2 Waitlist",
     available: false,
     actionHref: "#contact",
-    image: DROP_002_IMAGE,
+    image: "/images/drop-002.png",
     imageAlt: "Drop 002 American Seasoned tee mockup",
   },
 ];
