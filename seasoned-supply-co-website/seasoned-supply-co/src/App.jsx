@@ -13,7 +13,7 @@ const BRAND = {
 };
 
 const DROP_001_IMAGE = "/images/21280.jpg";
-const DROP_002_IMAGE = "/images/drop-002.jpg";
+const DROP_002_IMAGE = "/images/21134.png";
 
 const drops = [
   {
