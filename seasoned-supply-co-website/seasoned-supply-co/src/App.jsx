@@ -12,7 +12,7 @@ const BRAND = {
   slogan: "If you ain’t sneasin, it ain’t seasoned.",
 };
 
-const DROP_001_IMAGE = "/images/2113a.png";
+const DROP_001_IMAGE = "/images/21280.jpg";
 const DROP_002_IMAGE = "/images/drop-002.jpg";
 
 const drops = [
