@@ -13,7 +13,7 @@ const BRAND = {
 };
 
 const DROP_001_IMAGE = "/images/21280.jpg";
-const DROP_002_IMAGE = "/images/drop-002.png";
+const DROP_002_IMAGE = "/images/imagesdrop-002.jpg";
 
 const drops = [
   {
@@ -26,20 +26,20 @@ const drops = [
     cta: "DM to Reserve Drop 1",
     available: true,
     actionHref: "#contact",
-    image: "/images/21280.jpg",
+    image: DROP_001_IMAGE,
     imageAlt: "Drop 001 If You Ain’t Sneasin tee mockup",
   },
   {
     number: "DROP 2",
     name: "American Seasoned Tee",
-    status: "Releasing Next Friday",
-    statusColor: "bg-orange-400",
+    status: "Available Now",
+    statusColor: "bg-green-500",
     price: "$65",
-    description: "The bigger red, white, and seasoned flag-style design. DM before release day to lock in your order.",
-    cta: "Join Drop 2 Waitlist",
-    available: false,
+    description: "The bigger red, white, and seasoned flag-style design. Available now.",
+    cta: "DM to Order Drop 2",
+    available: true,
     actionHref: "#contact",
-    image: "/images/drop-002.png",
+    image: DROP_002_IMAGE,
     imageAlt: "Drop 002 American Seasoned tee mockup",
   },
 ];
@@ -113,7 +113,7 @@ function DropCard({ drop }) {
 
 function runBasicTests() {
   const hasDrop1 = drops.some((drop) => drop.number === "DROP 1" && drop.available === true);
-  const hasDrop2 = drops.some((drop) => drop.number === "DROP 2" && drop.available === false);
+  const hasDrop2 = drops.some((drop) => drop.number === "DROP 2" && drop.available === true);
   const hasInstagram = BRAND.instagram === "@josh_sheffield0";
   const allDropsHaveImages = drops.every((drop) => typeof drop.image === "string" && drop.image.startsWith("/images/"));
   const allDropsHavePrices = drops.every((drop) => drop.price === "$65");
@@ -121,7 +121,7 @@ function runBasicTests() {
   return {
     hasRequiredDropNames: drops.length === 2,
     hasAvailableDrop1: hasDrop1,
-    hasComingSoonDrop2: hasDrop2,
+    hasAvailableDrop2: hasDrop2,
     hasCorrectInstagram: hasInstagram,
     allDropsHaveImages,
     allDropsHavePrices,
@@ -168,7 +168,7 @@ export default function SeasonedSupplyCoLandingPage() {
             <div className="space-y-8">
               <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-bold text-white/75 shadow-xl backdrop-blur">
                 <span className="h-2 w-2 rounded-full bg-red-500" />
-                Drop 1 live · Drop 2 coming soon
+                Drop 1 live · Drop 2 live
               </div>
 
               <div>
@@ -222,7 +222,7 @@ export default function SeasonedSupplyCoLandingPage() {
               <h2 className="text-5xl font-black uppercase leading-none tracking-[-0.05em] md:text-7xl">Drop 1 & Drop 2</h2>
             </div>
             <p className="max-w-xl text-lg leading-relaxed text-white/60">
-              Drop 1 is the first official run. Drop 2 releases next Friday at $65. DM before release day to lock in your order and get $10 off.
+              Drop 1 and Drop 2 are both live at $65. DM to reserve your size and arrange pickup or shipping.
             </p>
           </div>
 
@@ -274,7 +274,7 @@ export default function SeasonedSupplyCoLandingPage() {
           <div className="space-y-4">
             {[
               "Drop 1 proves demand",
-              "Drop 2 builds anticipation",
+              "Drop 2 expands the collection",
               "Instagram drives the first orders",
               "Future releases can expand into hoodies, hats, aprons, and patches",
             ].map((item) => (
