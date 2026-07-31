@@ -23,9 +23,9 @@ const drops = [
     statusColor: "bg-green-500",
     price: "$65",
     description: "The original chef-skull design. Navy tee, left-chest print, and bold back graphic.",
-    cta: "DM to Reserve Drop 1",
+    cta: "Buy Drop 1",
     available: true,
-    actionHref: "#contact",
+    actionHref: "https://buy.stripe.com/eVq8wP2Cdeq07e60QS4Ja01",
     image: DROP_001_IMAGE,
     imageAlt: "Drop 001 If You Ain’t Sneasin tee mockup",
   },
@@ -36,9 +36,9 @@ const drops = [
     statusColor: "bg-green-500",
     price: "$65",
     description: "The bigger red, white, and seasoned flag-style design. Available now.",
-    cta: "DM to Order Drop 2",
+    cta: "Buy Drop 2",
     available: true,
-    actionHref: "#contact",
+    actionHref: "https://buy.stripe.com/4gMcN51y96XygOGczA4Ja00",
     image: DROP_002_IMAGE,
     imageAlt: "Drop 002 American Seasoned tee mockup",
   },
@@ -155,12 +155,10 @@ export default function SeasonedSupplyCoLandingPage() {
             </nav>
 
             <a
-              href={BRAND.instagramProfile}
-              target="_blank"
-              rel="noreferrer"
+              href="#drops"
               className="hidden rounded-2xl bg-red-700 px-6 py-3 text-sm font-black uppercase tracking-widest text-white transition hover:bg-red-800 md:inline-flex"
             >
-              Shop / DM
+              Shop Drops
             </a>
           </header>
 
@@ -222,7 +220,7 @@ export default function SeasonedSupplyCoLandingPage() {
               <h2 className="text-5xl font-black uppercase leading-none tracking-[-0.05em] md:text-7xl">Drop 1 & Drop 2</h2>
             </div>
             <p className="max-w-xl text-lg leading-relaxed text-white/60">
-              Drop 1 and Drop 2 are both live at $65. DM to reserve your size and arrange pickup or shipping.
+              Both drops are live at $65 with shipping included. Choose your shirt, size, and quantity, then check out securely online.
             </p>
           </div>
 
@@ -243,10 +241,10 @@ export default function SeasonedSupplyCoLandingPage() {
 
           <div className="grid gap-4 md:grid-cols-2">
             {[
-              { title: "Choose size", text: `Available sizes: ${sizes.join(", ")}.` },
-              { title: "DM Instagram", text: `Message ${BRAND.instagram} to reserve.` },
-              { title: "Confirm payment", text: "Cash App, Venmo, and Zelle accepted. Collect payment before holding inventory." },
-              { title: "Pickup or shipping", text: "Local handoff or ship when ready." },
+              { title: "Choose your drop", text: "Pick Drop 1 or Drop 2 and tap Buy Now." },
+              { title: "Select size", text: `Choose from ${sizes.join(", ")} securely during checkout.` },
+              { title: "Pay securely", text: "Pay by card or an available wallet through Stripe checkout." },
+              { title: "We ship it", text: "Shipping is included in the $65 price. Enter your delivery address at checkout." },
             ].map((step, index) => (
               <div key={step.title} className="rounded-3xl border border-[#07111f]/10 bg-[#f7f3ec] p-6 shadow-sm">
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-red-700 text-xl font-black text-white">{index + 1}</div>
@@ -300,8 +298,8 @@ export default function SeasonedSupplyCoLandingPage() {
                 <a href={BRAND.instagramProfile} target="_blank" rel="noreferrer" className="rounded-xl bg-red-700 px-4 py-2 text-xs font-black uppercase tracking-widest text-white transition hover:bg-red-800">
                   Open Instagram
                 </a>
-                <a href={`sms:${BRAND.phone.replace(/[^0-9]/g, "")}?body=Hey%20I%20want%20to%20reserve%20Drop%201`} className="rounded-xl border border-white/20 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-widest text-white transition hover:bg-white/10">
-                  Text to Reserve
+                <a href={`sms:${BRAND.phone.replace(/[^0-9]/g, "")}?body=Hey%20I%20have%20a%20question%20about%20a%20shirt`} className="rounded-xl border border-white/20 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-widest text-white transition hover:bg-white/10">
+                  Text a Question
                 </a>
               </div>
             </div>
@@ -309,23 +307,23 @@ export default function SeasonedSupplyCoLandingPage() {
           <div className="grid gap-3 text-sm font-bold text-white/70 sm:grid-cols-3">
             <p className="rounded-2xl bg-black/20 p-4">Updates, drops, and availability.</p>
             <p className="rounded-2xl bg-black/20 p-4">Text: {BRAND.phone}</p>
-            <p className="rounded-2xl bg-black/20 p-4">Cash App, Venmo, and Zelle accepted.</p>
+            <p className="rounded-2xl bg-black/20 p-4">Secure checkout powered by Stripe.</p>
           </div>
         </div>
       </section>
 
       <section className="bg-white px-6 py-16 text-[#07111f] md:px-10 lg:px-16">
         <div className="mx-auto max-w-7xl rounded-[2rem] border border-[#07111f]/10 bg-[#f7f3ec] p-6 shadow-sm md:p-8">
-          <p className="mb-3 text-sm font-black uppercase tracking-[0.35em] text-red-700">Payment Options</p>
-          <h2 className="text-4xl font-black uppercase tracking-[-0.04em] md:text-5xl">Reserve first. Pay clean.</h2>
+          <p className="mb-3 text-sm font-black uppercase tracking-[0.35em] text-red-700">Secure Checkout</p>
+          <h2 className="text-4xl font-black uppercase tracking-[-0.04em] md:text-5xl">Choose your drop. We’ll handle the rest.</h2>
           <p className="mt-3 max-w-3xl text-[#07111f]/65">
-            Shirts are $65. For the first drops, payment can stay simple. Have customers DM or text their name, size, and pickup/shipping choice, then send payment through one of the options below.
+            Each shirt is $65 with shipping included. Select your size and quantity, enter your delivery address, and pay securely through Stripe.
           </p>
-          <div className="mt-6 grid gap-3 md:grid-cols-3">
-            <a href={BRAND.cashApp} target="_blank" rel="noreferrer" className="rounded-2xl bg-[#07111f] p-5 font-black text-white transition hover:bg-[#10294a]">Cash App →</a>
-            <a href={BRAND.venmo} target="_blank" rel="noreferrer" className="rounded-2xl bg-[#07111f] p-5 font-black text-white transition hover:bg-[#10294a]">Venmo →</a>
-            <div className="rounded-2xl bg-[#07111f] p-5 font-black text-white">Zelle accepted by request</div>
+          <div className="mt-6 grid gap-3 md:grid-cols-2">
+            <a href={drops[0].actionHref} className="rounded-2xl bg-[#07111f] p-5 font-black text-white transition hover:bg-[#10294a]">Buy Drop 1 — Seasoned OG →</a>
+            <a href={drops[1].actionHref} className="rounded-2xl bg-red-700 p-5 font-black text-white transition hover:bg-red-800">Buy Drop 2 — Seasoned American →</a>
           </div>
+          <p className="mt-4 text-sm font-bold text-[#07111f]/55">Questions before ordering? Text {BRAND.phone} or message {BRAND.instagram}.</p>
         </div>
       </section>
 
