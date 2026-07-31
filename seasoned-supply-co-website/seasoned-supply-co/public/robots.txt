@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seasoned-supply-co.vercel.app/sitemap.xml
