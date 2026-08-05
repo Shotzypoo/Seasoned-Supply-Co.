@@ -39,7 +39,7 @@ const drops = [
     cta: "Buy Drop 2",
     available: true,
     actionHref: "https://buy.stripe.com/4gMcN51y96XygOGczA4Ja00",
-    image: drop-002.png,
+    image: DROP_002_IMAGE,
     imageAlt: "Drop 002 American Seasoned tee mockup",
   },
 ];
