@@ -13,7 +13,7 @@ const BRAND = {
 };
 
 const DROP_001_IMAGE = "/images/drop-1-sneezin-mockup.png";
-const DROP_002_IMAGE = "/images/drop-2-sneezin-mockup.png";
+const DROP_002_IMAGE = "/images/drop-2-sneezin-final-mockup.png";
 
 const drops = [
   {
@@ -39,7 +39,7 @@ const drops = [
     cta: "Buy Drop 2",
     available: true,
     actionHref: "https://buy.stripe.com/4gMcN51y96XygOGczA4Ja00",
-    image: DROP_002_IMAGE,
+   image: DROP_002_IMAGE,
     imageAlt: "Drop 2 American Seasoned tee front and back mockup",
   },
 ];
