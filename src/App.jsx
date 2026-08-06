@@ -9,25 +9,25 @@ const BRAND = {
   cashApp: "https://cash.app/$Shotzypoo",
   venmo: "https://venmo.com/code?user_id=4491908407625506352&created=1778127414",
   zelle: "Zelle accepted by request",
-  slogan: "If you ain’t sneasin, it ain’t seasoned.",
+  slogan: "If you ain’t sneezin’, it ain’t seasoned.",
 };
 
-const DROP_001_IMAGE = "/images/21280.jpg";
-const DROP_002_IMAGE = "/images/drop-002-actual.png";
+const DROP_001_IMAGE = "/images/drop-1-sneezin-mockup.png";
+const DROP_002_IMAGE = "/images/drop-2-sneezin-mockup.png";
 
 const drops = [
   {
     number: "DROP 1",
-    name: "If You Ain’t Sneasin Tee",
+    name: "If You Ain’t Sneezin’ Tee",
     status: "Available Now",
     statusColor: "bg-green-500",
     price: "$65",
     description: "The original chef-skull design. Navy tee, left-chest print, and bold back graphic.",
-    cta: "DM to Reserve Drop 1",
+    cta: "Buy Drop 1",
     available: true,
-    actionHref: "#contact",
+    actionHref: "https://buy.stripe.com/eVq8wP2Cdeq07e60QS4Ja01",
     image: DROP_001_IMAGE,
-    imageAlt: "Drop 001 If You Ain’t Sneasin tee mockup",
+    imageAlt: "Drop 1 If You Ain’t Sneezin’ tee front and back mockup",
   },
   {
     number: "DROP 2",
@@ -36,11 +36,11 @@ const drops = [
     statusColor: "bg-green-500",
     price: "$65",
     description: "The bigger red, white, and seasoned flag-style design. Available now.",
-    cta: "DM to Order Drop 2",
+    cta: "Buy Drop 2",
     available: true,
-    actionHref: "#contact",
+    actionHref: "https://buy.stripe.com/4gMcN51y96XygOGczA4Ja00",
     image: DROP_002_IMAGE,
-    imageAlt: "Drop 002 American Seasoned tee mockup",
+    imageAlt: "Drop 2 American Seasoned tee front and back mockup",
   },
 ];
 
@@ -222,7 +222,7 @@ export default function SeasonedSupplyCoLandingPage() {
               <h2 className="text-5xl font-black uppercase leading-none tracking-[-0.05em] md:text-7xl">Drop 1 & Drop 2</h2>
             </div>
             <p className="max-w-xl text-lg leading-relaxed text-white/60">
-              Drop 1 and Drop 2 are both live at $65. DM to reserve your size and arrange pickup or shipping.
+              Drop 1 and Drop 2 are both live at $65. Choose your shirt, select your size at secure checkout, and order online.
             </p>
           </div>
 
@@ -243,10 +243,10 @@ export default function SeasonedSupplyCoLandingPage() {
 
           <div className="grid gap-4 md:grid-cols-2">
             {[
+              { title: "Choose your shirt", text: "Pick Drop 1 or Drop 2." },
               { title: "Choose size", text: `Available sizes: ${sizes.join(", ")}.` },
-              { title: "DM Instagram", text: `Message ${BRAND.instagram} to reserve.` },
-              { title: "Confirm payment", text: "Cash App, Venmo, and Zelle accepted. Collect payment before holding inventory." },
-              { title: "Pickup or shipping", text: "Local handoff or ship when ready." },
+              { title: "Secure checkout", text: "Pay by card through Stripe. Cash App, Venmo, and Zelle are also available by request." },
+              { title: "Pickup or shipping", text: "Enter your shipping details or arrange a local handoff." },
             ].map((step, index) => (
               <div key={step.title} className="rounded-3xl border border-[#07111f]/10 bg-[#f7f3ec] p-6 shadow-sm">
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-red-700 text-xl font-black text-white">{index + 1}</div>
@@ -319,7 +319,7 @@ export default function SeasonedSupplyCoLandingPage() {
           <p className="mb-3 text-sm font-black uppercase tracking-[0.35em] text-red-700">Payment Options</p>
           <h2 className="text-4xl font-black uppercase tracking-[-0.04em] md:text-5xl">Reserve first. Pay clean.</h2>
           <p className="mt-3 max-w-3xl text-[#07111f]/65">
-            Shirts are $65. For the first drops, payment can stay simple. Have customers DM or text their name, size, and pickup/shipping choice, then send payment through one of the options below.
+            Shirts are $65. Use the Buy button for secure Stripe checkout, or contact us to pay through Cash App, Venmo, or Zelle.
           </p>
           <div className="mt-6 grid gap-3 md:grid-cols-3">
             <a href={BRAND.cashApp} target="_blank" rel="noreferrer" className="rounded-2xl bg-[#07111f] p-5 font-black text-white transition hover:bg-[#10294a]">Cash App →</a>
