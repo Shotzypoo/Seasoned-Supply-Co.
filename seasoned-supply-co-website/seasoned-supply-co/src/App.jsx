@@ -13,7 +13,7 @@ const BRAND = {
 };
 
 const DROP_001_IMAGE = "/images/drop-1-sneezin-mockup.png";
-const DROP_002_IMAGE = "/images/drop-2-sneezin-mockup.png";
+const DROP_002_IMAGE = "/images/drop-2-sneezin-final-mockup.png";
 
 const drops = [
   {
